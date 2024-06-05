@@ -179,6 +179,16 @@ const AddFlight = () => {
             placeholder="Type here"
           />
         </div>
+        <div className="addproduct-itemfield">
+          <p>Image Url</p>
+          <input
+            value={flightDetails.img}
+            onChange={handleChange}
+            type="text"
+            name="img"
+            placeholder="Type here"
+          />
+        </div>
       </div>
 
       <button
