@@ -45,14 +45,17 @@ const AddFlight = () => {
     try {
       let responseData;
       console.log(process.env.REACT_APP_BASE_URL);
-      await fetch(` http://localhost:8000/api/v1/addFlightDetails`, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(flightDetails),
-      })
+      await fetch(
+        ` ${process.env.REACT_APP_BASE_URL}/api/v1/addFlightDetails`,
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(flightDetails),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           console.log(data);

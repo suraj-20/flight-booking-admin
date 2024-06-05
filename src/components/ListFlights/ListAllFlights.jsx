@@ -6,7 +6,7 @@ const ListAllFlights = () => {
   console.log(Array.isArray(allFlights));
 
   const fetchInfo = async () => {
-    await fetch(`http://localhost:8000/api/v1/getAllFlight`)
+    await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/getAllFlight`)
       .then((res) => res.json())
       .then((data) => {
         setAllFlights(data);
